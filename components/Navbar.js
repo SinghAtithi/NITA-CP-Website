@@ -37,6 +37,11 @@ function Navbar() {
               <a>Resources</a>
             </Link>
           </li>
+          <li>
+            <Link href="/a2oj">
+              <a>A2OJ</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
