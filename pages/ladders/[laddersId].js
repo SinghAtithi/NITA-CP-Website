@@ -4,6 +4,7 @@ import LoadingSkeleton from '../../a2ojcomponents/LoadingSkeleton';
 import ladders from '../../a2ojdata/ladders.json';
 import useLocalStorage from '../../a2ojhooks/useLocalStorage';
 import useUser from '../../a2ojhooks/useUser';
+import Navbar from '../../components/Navbar';
 
 function Table({ problemSet }) {
   return (
@@ -91,6 +92,8 @@ const LaddersPage = () => {
   }
 
   return (
+      <div className="home">
+        <Navbar/>
     <Container>
       <section>
         <div className="bg-white dark:bg-gray-700 p-6 mx-auto max-w-2xl mb-4 rounded-none sm:rounded-md shadow-sm">
@@ -110,6 +113,7 @@ const LaddersPage = () => {
         <Table problemSet={localProblemSet} />
       </section>
     </Container>
+      </div>
   );
 };
 

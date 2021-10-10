@@ -5,6 +5,7 @@ import { useState } from "react";
 import Container from "../a2ojcomponents/Container";
 import Header from "../a2ojcomponents/Header";
 import InputField from "../a2ojcomponents/InputField";
+import Navbar from "../components/Navbar";
 import SelectField from "../a2ojcomponents/SelectField";
 import useLocalStorage from "../a2ojhooks/useLocalStorage";
 
@@ -38,9 +39,18 @@ function IndexPage() {
   const [handle, setHandle] = useLocalStorage("handle", "");
   const [laddersName, setLaddersName] = useLocalStorage("laddersName", "");
   const [user, setUser] = useLocalStorage("user", "");
-  const [selectedLadder, setSelectedLadder] = useLocalStorage("selectedLadder", laddersType[0]);
-  const [selectedDivision, setSelectedDivision] = useLocalStorage("selectedDivision", divisions[0]);
-  const [selectedRating, setSelectedRating] = useLocalStorage("selectedRating", ratings[0]);
+  const [selectedLadder, setSelectedLadder] = useLocalStorage(
+    "selectedLadder",
+    laddersType[0]
+  );
+  const [selectedDivision, setSelectedDivision] = useLocalStorage(
+    "selectedDivision",
+    divisions[0]
+  );
+  const [selectedRating, setSelectedRating] = useLocalStorage(
+    "selectedRating",
+    ratings[0]
+  );
 
   const [error, setError] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -67,7 +77,7 @@ function IndexPage() {
           setUser(res);
           router.push(`ladders/${ladder}`);
         }
-        
+
         if (res.status === "FAILED") {
           setError(res.comment);
         }
@@ -81,99 +91,102 @@ function IndexPage() {
   };
 
   return (
-    <Container>
-      <Header />
-      <main className="py-8">
-        <div className="bg-white dark:bg-gray-700 shadow h-auto px-6 py-8 container mx-auto sm:w-8/12 lg:w-6/12 rounded-none sm:rounded-md">
-          {error !== null ? (
-            <div className="px-4 py-3 bg-red-200 mb-4 rounded-md">
-              <div className="flex items-center">
-                <HiXCircle className="h-5 w-5 text-red-500 mr-2" />
-                <p className="font-medium text-red-800">
-                  Something went wrong!
-                </p>
+    <div className="home">
+    <Navbar/>
+      <Container >
+        <Header />
+        <main className="py-8">
+          <div className="bg-white dark:bg-gray-700 shadow h-auto px-6 py-8 container mx-auto sm:w-8/12 lg:w-6/12 rounded-none sm:rounded-md">
+            {error !== null ? (
+              <div className="px-4 py-3 bg-red-200 mb-4 rounded-md">
+                <div className="flex items-center">
+                  <HiXCircle className="h-5 w-5 text-red-500 mr-2" />
+                  <p className="font-medium text-red-800">
+                    Something went wrong!
+                  </p>
+                </div>
+                <p className="text-sm ml-7 text-red-700">{error}</p>
               </div>
-              <p className="text-sm ml-7 text-red-700">{error}</p>
-            </div>
-          ) : null}
-          <form onSubmit={onSubmit}>
-            <div className="space-y-3">
-              <InputField
-                value={handle}
-                onChange={(e) => setHandle(e.target.value)}
-              />
-              <SelectField
-                label="Ladders type"
-                data={laddersType}
-                selected={selectedLadder}
-                setSelected={setSelectedLadder}
-              />
-              {selectedLadder?.name === "Division" ? (
-                <SelectField
-                  label="By division"
-                  data={divisions}
-                  selected={selectedDivision}
-                  setSelected={setSelectedDivision}
+            ) : null}
+            <form onSubmit={onSubmit}>
+              <div className="space-y-3">
+                <InputField
+                  value={handle}
+                  onChange={(e) => setHandle(e.target.value)}
                 />
-              ) : (
                 <SelectField
-                  label="By rating"
-                  data={ratings}
-                  selected={selectedRating}
-                  setSelected={setSelectedRating}
+                  label="Ladders type"
+                  data={laddersType}
+                  selected={selectedLadder}
+                  setSelected={setSelectedLadder}
                 />
-              )}
-            </div>
-
-            <div className="mt-6">
-              <button
-                type="submit"
-                className="w-full focus:outline-none sm:w-auto inline-flex items-center justify-center text-white font-medium leading-none bg-purple-600 dark:bg-purple-500 active:bg-purple-700 focus-visible:ring-2 focus-visible:ring-purple-500 dark:focus-within:ring-offset-gray-800 focus:ring-offset-2 rounded-lg shadow-sm hover:shadow-lg py-3 px-5 border border-transparent"
-              >
-                {isSubmitting ? (
-                  <>
-                    <svg
-                      className="animate-spin -ml-1 mr-3 h-4 w-4 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                    Loading
-                  </>
+                {selectedLadder?.name === "Division" ? (
+                  <SelectField
+                    label="By division"
+                    data={divisions}
+                    selected={selectedDivision}
+                    setSelected={setSelectedDivision}
+                  />
                 ) : (
-                  "View ladder"
+                  <SelectField
+                    label="By rating"
+                    data={ratings}
+                    selected={selectedRating}
+                    setSelected={setSelectedRating}
+                  />
                 )}
-              </button>
-            </div>
-          </form>
+              </div>
+
+              <div className="mt-6">
+                <button
+                  type="submit"
+                  className="w-full focus:outline-none sm:w-auto inline-flex items-center justify-center text-white font-medium leading-none bg-purple-600 dark:bg-purple-500 active:bg-purple-700 focus-visible:ring-2 focus-visible:ring-purple-500 dark:focus-within:ring-offset-gray-800 focus:ring-offset-2 rounded-lg shadow-sm hover:shadow-lg py-3 px-5 border border-transparent"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg
+                        className="animate-spin -ml-1 mr-3 h-4 w-4 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Loading
+                    </>
+                  ) : (
+                    "View ladder"
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </main>
+        <div className="text-center font-medium flex w-full justify-center">
+          <a
+            href="https://github.com/SinghAtithi/NITA-CP-Website?organization=SinghAtithi&organization=SinghAtithi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="items-center flex text-gray-400 visited:text-gray-400 dark:visited:text-gray-600"
+          >
+            <AiFillGithub className="mr-2 h-5 w-5" />
+            NITA-CP
+          </a>
         </div>
-      </main>
-      <div className="text-center font-medium flex w-full justify-center">
-        <a
-          href="https://github.com/SinghAtithi/NITA-CP-Website?organization=SinghAtithi&organization=SinghAtithi"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="items-center flex text-gray-400 visited:text-gray-400 dark:visited:text-gray-600"
-        >
-          <AiFillGithub className="mr-2 h-5 w-5" />
-          NITA-CP
-        </a>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 }
 

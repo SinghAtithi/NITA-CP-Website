@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 function blog() {
     return (
-        <div className="home">
+        <div className="home ">
             <Navbar/>
             this is blog page
         </div>
