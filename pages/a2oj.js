@@ -7,7 +7,6 @@ import Header from "../a2ojcomponents/Header";
 import InputField from "../a2ojcomponents/InputField";
 import SelectField from "../a2ojcomponents/SelectField";
 import useLocalStorage from "../a2ojhooks/useLocalStorage";
-import styles from "../styles/Home.module.css";
 
 const divisions = [
   { name: "Division 2 A", code: "div_2a" },

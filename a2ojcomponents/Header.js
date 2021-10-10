@@ -6,6 +6,7 @@ import {
   HiOutlineScale,
 } from "react-icons/hi";
 
+
 const Header = () => {
   return (
     <header className="h-auto p-6 container mx-auto sm:w-8/12 lg:w-6/12 rounded-md ">
