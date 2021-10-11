@@ -10,7 +10,7 @@ function Navbar() {
           <div className="text-3xl cursor-pointer">NITA-CP</div>
         </a>
       </Link>
-      <div className="w-3/5">
+      <div className="w-2/4">
         <ul className="flex flex-wrap justify-between text-xl ">
           <li className="navhome">
             <Link href="/">
@@ -27,11 +27,14 @@ function Navbar() {
               <a>Blog</a>
             </Link>
           </li>
-          <li>
+
+            {/* Practice page will be added later */}
+
+          {/* <li>
             <Link href="/practice">
               <a>Practice</a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/resources">
               <a>Resources</a>
