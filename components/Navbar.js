@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="flex m-3 items-center flex-row justify-between mx-10 align-center">
+    <nav className="flex p-3 items-center flex-row justify-between px-10 align-cente bg-gray-100 stickynav ">
       <Link href="/">
         <a>
           <div className="text-3xl cursor-pointer">NITA-CP</div>
