@@ -1,11 +1,18 @@
 import React from 'react'
+import BlogCard from '../components/BlogCard'
 import Navbar from '../components/Navbar'
 
 function blog() {
     return (
-        <div className="home ">
+        <div className="home">
             <Navbar/>
-            this is blog page
+        <div className="flex flex-wrap justify-around">
+            <BlogCard/>
+            <BlogCard/>
+            <BlogCard/>
+            <BlogCard/>
+            <BlogCard/>
+        </div>
         </div>
     )
 }
