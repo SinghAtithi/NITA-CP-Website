@@ -9,7 +9,7 @@ function Tryy() {
     <div className="home">
       <Navbar />
       <div className=" flex justify-center">
-        <div className="flex justify-around flex-col items-center m-40  mt-14 rounded-xl bg-gray-200 shadow-xl ">
+        <div className="flex justify-around flex-col items-center m-32  mt-14 rounded-xl bg-gray-200 shadow-xl ">
           <h1 className="text-3xl font-bold">B. ALPHA BETA GAMMA</h1>
           <div className="flex text-md m-4 bg-white p-2 rounded-2xl font-bold text-purple-800 flex-row justify-between w-4/5">
             <span>GFG</span>
