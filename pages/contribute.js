@@ -1,11 +1,9 @@
 import React from 'react'
+import ComingSoon from '../components/ComingSoon'
 import Navbar from '../components/Navbar'
 function Contribute() {
     return (
-        <div className="home">
-            <Navbar></Navbar>
-            <h1>This is contribute page</h1>
-        </div>
+        <ComingSoon/>
     )
 }
 

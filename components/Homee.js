@@ -13,10 +13,11 @@ function Homee() {
               CP For
               <span className="text-5xl sm:text-7xl">All</span>
             </h1>
-            <p className="text-sm sm:text-base text-gray-700 dark:text-white">
-              Dimension of reality that makes change possible and
-              understandable. An indefinite and homogeneous environment in which
-              natural events and human existence take place.
+            <p className="text-sm sm:text-base mt-6 text-gray-700 dark:text-white">
+              Lets dive into an amazing journey together, This website will help
+              you in fast forwarding your competitive programming journey
+              <br></br>
+              Resources, Practice Problems, Blogs and Edutorials, We have got everything covered.
             </p>
             <div className="flex mt-8">
               <Link href="/resources">
