@@ -10,21 +10,17 @@
 }
 
 .home {
-  border-style: solid;
-  border-width: 15px;
-  border-color: #7c3aed;
-  min-height: 100vh;
-  width: auto;
+  @apply min-h-screen max-w-7xl mx-auto;
 }
 
+.tab {
+  @apply m-0 px-3.5 py-2 rounded-lg hover:bg-gray-200 cursor-pointer;
+}
 .navhome {
+  @apply m-0 px-3.5 py-2 rounded-lg cursor-pointer;
   background-color: #7c3aed52;
-  padding: 4px 15px;
-  margin: -4px 0px;
-  border-radius: 20px;
 }
 
 .shadoww {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-

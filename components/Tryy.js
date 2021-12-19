@@ -2,12 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Gist from "react-gist";
-import Navbar from "./Navbar";
 
 function Tryy() {
   return (
     <div className="home">
-      <Navbar />
       <div className=" flex justify-center">
         <div className="flex justify-around flex-col items-center m-32  mt-14 rounded-xl bg-gray-200 shadow-xl ">
           <h1 className="text-3xl font-bold">B. ALPHA BETA GAMMA</h1>
