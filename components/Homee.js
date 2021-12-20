@@ -9,7 +9,7 @@ function Homee() {
     <div>
       <div className="px-6 lg:px-10 2xl:px-0 py-8 sm:py-16 bg-white dark:bg-gray-800">
         <div className="grid grid-cols-1 sm:grid-cols-2">
-          <div className="space-y-6 order-2 sm:order-1">
+          <div className="flex flex-col justify-center space-y-6 order-2 sm:order-1">
             <div className="w-20 h-2 bg-gray-800 dark:bg-white" />
             <div className="font-bebas-neue uppercase font-black dark:text-white text-gray-800">
               <h1 className="text-6xl sm:text-8xl ">

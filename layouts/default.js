@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 const Layout = ({ children }) => {
   return (
     <div>
-      <header>
+      <header className='sticky top-0 z-40'>
         <Navbar />
       </header>
       <main>

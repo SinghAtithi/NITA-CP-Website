@@ -11,7 +11,8 @@ const tabs = [
 // {name: 'Practice', href: '/practice', current: false},
 
 function Navbar() {
-  let [ currentTab, setTab ] = useState(0)
+  const [ currentTab, setTab ] = useState(0)
+  const [ isOpen, open ] = useState(false)
 
   useEffect(() => {
     if(window.sessionStorage.currentTab)
@@ -22,15 +23,11 @@ function Navbar() {
     window.sessionStorage.currentTab = currentTab
   }, [currentTab]);
 
-  function changeTab(i) {
-    setTab(i)
-  }
-
   const tab = tabs.map((item, i) => {
     return (
       <li key={ item.name }>
         <Link href={ item.href }>
-          <a className={ `block ${ currentTab === i ? 'navhome' : 'tab' } text-center` } onClick={ changeTab.bind(this, i) }>
+          <a className={ `block ${ currentTab === i ? 'navhome' : 'tab' } sm:text-center` } onClick={ setTab.bind(this, i) }>
             { item.name }
           </a>
         </Link>
@@ -39,26 +36,34 @@ function Navbar() {
   })
 
   return (
-    <nav className="px-6 sm:px-10 py-4 bg-gray-100 relative z-10 shadow">
-      <div className="max-w-7xl mx-auto flex items-center">
-        <Link href="/">
-          <a>
-            <div className="text-3xl cursor-pointer text-purple-900 font-semibold">NITA-CP</div>
-          </a>
-        </Link>
+    <div>
+      <div className="px-6 sm:px-10 py-4 bg-gray-100 relative z-10 shadow">
+        <nav className="max-w-7xl mx-auto flex items-center relative z-10">
+          <Link href="/">
+            <a>
+              <div className="text-3xl cursor-pointer text-purple-900 font-semibold">NITA-CP</div>
+            </a>
+          </Link>
 
-        <div className="ml-auto">
-          <ul className="hidden sm:flex space-x-4 text-lg">
+          <div className="ml-auto">
+            <ul className="hidden sm:flex space-x-4 text-lg">
+              { tab }
+            </ul>
+            <div className="flex items-center justify-center sm:hidden w-9 h-9 hover:bg-gray-300 rounded-full cursor-pointer" onClick={ open.bind(this, !isOpen) }>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </div>
+          </div>
+        </nav>
+        <nav className={`${isOpen ? 'sm:hidden flex flex-col' : 'hidden'} pt-4 select-none`}>
+          <ul className="text-md">
             { tab }
           </ul>
-          <div className="sm:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </div>
-        </div>
+        </nav>
       </div>
-    </nav>
+      <div className={`${isOpen ? 'sm:hidden' : 'hidden'} w-screen h-screen bg-gray-800 opacity-50 fixed top-0 left-0`} />
+    </div>
   );
 }
 
