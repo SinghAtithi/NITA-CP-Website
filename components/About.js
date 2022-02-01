@@ -22,9 +22,9 @@ function About() {
           <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div className="mb-8">
               <Image
-                src="https://media-exp1.licdn.com/dms/image/C4D03AQF9tYgKzbkzqQ/profile-displayphoto-shrink_400_400/0/1630318627699?e=1639008000&v=beta&t=3IdniZEK-Fgh96Vff79SHcFp1uvk6kRaH3EVrFb2X0g"
-                width={100}
-                height={100}
+                src="https://media-exp1.licdn.com/dms/image/C5603AQEkGpzRFcgZOA/profile-displayphoto-shrink_800_800/0/1643715446285?e=1649289600&v=beta&t=HiAaV4zyQWykau1AyjYXi7M1n0DMdfwioGMmh7aStrQ"
+                width={200}
+                height={200}
                 className="object-center object-cover rounded-full h-36 w-36"
                 alt="Tanya's photo"
               />
@@ -41,9 +41,9 @@ function About() {
           <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div className="mb-8">
               <Image
-                src="https://media-exp1.licdn.com/dms/image/C4E03AQGyjlKPAJlcxQ/profile-displayphoto-shrink_400_400/0/1628573551678?e=1639008000&v=beta&t=LrujJa0fXbccrpguAV8yOAc-l_umKOR7Rq-7I5HPyYo"
-                width={100}
-                height={100}
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQEErA9fup3USw/profile-displayphoto-shrink_800_800/0/1636949337187?e=1649289600&v=beta&t=HXhChtTZ6Xg5B5_ZIFilemmH2M2-LvNiMVqXFmfJJwk"
+                width={200}
+                height={200}
                 className="object-center object-cover rounded-full h-36 w-36"
                 alt="Atithi's photo"
               />

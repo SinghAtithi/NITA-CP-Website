@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="flex p-3 items-center flex-row justify-between px-10 align-cente bg-gray-100 stickynav ">
       <Link href="/">
         <a>
-          <div className="text-3xl cursor-pointer text-purple-900 font-semibold">NITA-CP</div>
+          <div className="text-3xl cursor-pointer text-purple-900 font-semibold">DCC-CP</div>
         </a>
       </Link>
       <div className="w-2/4">
