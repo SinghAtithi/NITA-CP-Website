@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Editor, { DiffEditor, useMonaco, loader } from "@monaco-editor/react";
 
-function editor() {
+function Editorr() {
 	const snippet = `#include <bits/stdc++.h>
 using namespace std;
 
@@ -100,4 +100,4 @@ int main() {
 	);
 }
 
-export default editor;
+export default Editorr;
