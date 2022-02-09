@@ -23,18 +23,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/blog">
-              <a>Blog</a>
+            <Link href="/editor">
+              <a>Code Editor</a>
             </Link>
           </li>
 
-            {/* Practice page will be added later */}
-
-          {/* <li>
-            <Link href="/practice">
-              <a>Practice</a>
-            </Link>
-          </li> */}
           <li>
             <Link href="/resources">
               <a>Resources</a>
