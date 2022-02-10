@@ -24,7 +24,7 @@ int main() {
 }
       `;
 
-function editor() {
+function Editor() {
 	const [code, setCode] = useState(snippet);
 	const [formattedCode, setFormattedCode] = useState(snippet);
 	const [input, setInput] = useState("Paste Your inputs here");
@@ -91,4 +91,4 @@ function editor() {
 	);
 }
 
-export default editor;
+export default Editor;
