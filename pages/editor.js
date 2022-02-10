@@ -34,7 +34,10 @@ function Editor() {
 	const [memory, setMemory] = useState("");
 
 	useEffect(() => {
-		setCode(localStorage.getItem("code"));
+		var dp = localStorage.getItem("code");
+		if (dp.length > 10) {
+			setCode(localStorage.getItem("code"));
+		}
 		// setFormattedCode(code.replaceAll("\n", " "));
 	}, []);
 
@@ -56,9 +59,9 @@ function Editor() {
 		};
 		axios.post("https://api.jdoodle.com/v1/execute", program).then(
 			(res) => {
-                        setOutput(res.data.output);
-                        setCpu(res.data.cpuTime);
-                        setMemory(res.data.memory);
+				setOutput(res.data.output);
+				setCpu(res.data.cpuTime);
+				setMemory(res.data.memory);
 				console.log(res.data);
 			}
 		);
