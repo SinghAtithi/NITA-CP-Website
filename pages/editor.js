@@ -35,7 +35,7 @@ function Editor() {
 
 	useEffect(() => {
 		var dp = localStorage.getItem("code");
-		if (dp.length > 10) {
+		if (dp) {
 			setCode(localStorage.getItem("code"));
 		}
 		// setFormattedCode(code.replaceAll("\n", " "));
@@ -59,6 +59,7 @@ function Editor() {
 		};
 		axios.post("https://api.jdoodle.com/v1/execute", program).then(
 			(res) => {
+				// setOutput("Ha bhai Akshat Randi hai");
 				setOutput(res.data.output);
 				setCpu(res.data.cpuTime);
 				setMemory(res.data.memory);
