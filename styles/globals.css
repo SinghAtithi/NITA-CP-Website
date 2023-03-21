@@ -3,14 +3,15 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 * {
-  font-family: poppins;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	font-family: poppins;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .home {
   @apply min-h-screen max-w-7xl mx-auto;
+
 }
 
 .tab {
@@ -19,8 +20,9 @@
 .navhome {
   @apply m-0 px-3.5 py-2 rounded-lg cursor-pointer;
   background-color: #7c3aed52;
+
 }
 
 .shadoww {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
