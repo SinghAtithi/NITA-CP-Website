@@ -10,34 +10,17 @@
 }
 
 .home {
-	border-style: solid;
-	border-width: 15px;
-	border-color: #7c3aed;
-	min-height: 100%;
-	width: auto;
+  @apply min-h-screen max-w-7xl mx-auto;
+
 }
 
-.input {
-	height: 50vh;
-	width: auto;
-	border-style: solid;
-	border-width: 10px;
-	border-color: #7c3aed;
-	color: white;
-	background-color: rgb(32, 32, 32);
+.tab {
+  @apply m-0 px-3.5 py-2 rounded-lg hover:bg-gray-200 cursor-pointer;
 }
-
-.input-text {
-	@apply w-full;
-	@apply h-full;
-	background-color: rgb(32, 32, 32);
-}
-
 .navhome {
-	background-color: #7c3aed52;
-	padding: 4px 15px;
-	margin: -4px 0px;
-	border-radius: 20px;
+  @apply m-0 px-3.5 py-2 rounded-lg cursor-pointer;
+  background-color: #7c3aed52;
+
 }
 
 .shadoww {

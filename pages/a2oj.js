@@ -5,7 +5,6 @@ import { useState } from "react";
 import Container from "../a2ojcomponents/Container";
 import Header from "../a2ojcomponents/Header";
 import InputField from "../a2ojcomponents/InputField";
-import Navbar from "../components/Navbar";
 import SelectField from "../a2ojcomponents/SelectField";
 import useLocalStorage from "../a2ojhooks/useLocalStorage";
 
@@ -92,7 +91,6 @@ function IndexPage() {
 
   return (
     <div className="home">
-    <Navbar/>
       <Container >
         <Header />
         <main className="py-8">

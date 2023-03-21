@@ -1,11 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import About from '../components/About'
 import WantToContribute from '../components/WantToContribute'
 function about() {
     return (
-        <div className="home">
-            <Navbar/>
+        <div className="home space-y-12">
             <About/>
             <WantToContribute/>
         </div>

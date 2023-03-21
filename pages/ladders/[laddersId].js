@@ -1,10 +1,10 @@
-import { useRouter } from "next/router";
-import Container from "../../a2ojcomponents/Container";
-import LoadingSkeleton from "../../a2ojcomponents/LoadingSkeleton";
-import ladders from "../../a2ojdata/ladders.json";
-import useLocalStorage from "../../a2ojhooks/useLocalStorage";
-import useUser from "../../a2ojhooks/useUser";
-import Navbar from "../../components/Navbar";
+import { useRouter } from 'next/router';
+import Container from '../../a2ojcomponents/Container';
+import LoadingSkeleton from '../../a2ojcomponents/LoadingSkeleton';
+import ladders from '../../a2ojdata/ladders.json';
+import useLocalStorage from '../../a2ojhooks/useLocalStorage';
+import useUser from '../../a2ojhooks/useUser';
+
 
 function Table({ problemSet }) {
   return (
@@ -93,14 +93,14 @@ const LaddersPage = () => {
 
   return (
     <div className="home">
-      <Navbar />
+
       <Container>
         <section>
           <div className="bg-white dark:bg-gray-700 p-6 mx-auto max-w-2xl mb-4 rounded-none sm:rounded-md shadow-sm">
             <div className="flex justify-between">
-              <h2 className="font-semibold text-xl text-gray-700 dark:text-gray-100">
-                {laddersName} ({solved})
-              </h2>
+
+            <h2 className="font-semibold text-xl text-gray-700 dark:text-gray-100">{laddersName} ({solved})</h2>
+
               <span className="block font-medium text-gray-600 dark:text-gray-200">
                 {handle}
               </span>
